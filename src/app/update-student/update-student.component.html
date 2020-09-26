@@ -1,0 +1,42 @@
+<!-- <div style="text-align: center">
+    <h3>{{message}}</h3>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12">
+            <h4 class="mt-3 mb-3">Update Student Data</h4>
+            <form>
+                <fieldset>
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" type="text" [(ngModel)]="student.name" name="name" id="txt" required value="name" placeholder="Enter your name" />
+                        <!-- <p>{{student.name}}</p> -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input class="form-control" type="text" [(ngModel)]="student.dob" name="dob" id="txt " placeholder="Enter dob " required />
+
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="email ">Email</label>
+                        <input class="form-control " required type="text " [(ngModel)]="student.email " name="email " id="txt " placeholder="Enter your email " />
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="mobile ">Mobile</label>
+                        <input class="form-control " required type="text " [(ngModel)]="student.mobile " name="mobile " id="txt " placeholder="Enter mobile no " />
+                    </div>
+
+                    <div class="form-group ">
+                        <input class="btn btn-success " type="submit " name="submit_reg " value="Update Student" (click)="updateStudent() ">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>

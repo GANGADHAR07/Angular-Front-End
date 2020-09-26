@@ -1,0 +1,33 @@
+<div class="col-md-6">
+  <blockquote class="blockquote text-center">
+    <p class="mb-0"> Here is the Student Details</p>
+    <footer class="blockquote-footer">Done by  <cite title="Source Title">K GANGADHAR</cite></footer>
+    <footer class="blockquote-footer"> Guided by <cite title="Source Title">Kishor Sir</cite></footer>
+  </blockquote>
+    
+    <table class="table">
+      <thead class="thead-light">
+      <tr>
+        
+        <th class="hidden">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Dob</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+      <tbody>
+           <tr *ngFor="let student of students">
+              <td class="hidden">{{student.id}}</td>
+              <th scope="row">{{student.name}}</th>
+              <th scope="row">{{student.email}}</th>
+              <td>{{student.dob}}</td>
+              <th scope="row">{{student.mobile}}</th>
+             
+              <td><button class="btn btn-danger" (click)="deleteStudent(student.id)"> Delete</button>
+                <button class="btn btn-secondary" style="margin: 5px" (click)="updateStudent(student.id)">Edit</button></td>
+           </tr>
+      </tbody>
+    </table>
+    </div>
